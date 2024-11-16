@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"os"
 
 	"github.com/goccy/go-json"
 	"github.com/gofiber/fiber/v3"
@@ -57,5 +58,7 @@ func main() {
 
 	fontsApi = NewFontsApi(app, api)
 
-	log.Fatal(app.Listen(":3000"))
+	logger.Debug("Starting server on %s", os.Getenv("HOST"))
+
+	log.Fatal(app.Listen(os.Getenv("HOST")))
 }
