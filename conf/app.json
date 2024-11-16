@@ -1,0 +1,18 @@
+{
+  "Logger": {
+    "Targets": [
+      {
+        "type": "ConsoleTarget",
+        "MaxLevel": 7,
+        "ColorMode": true
+      },
+      {
+        "type": "FileTarget",
+        "FileName": "app.log",
+        "MaxLevel": 7,
+        "Rotate": true,
+        "BackupCount": 3
+      }
+    ]
+  }
+}
